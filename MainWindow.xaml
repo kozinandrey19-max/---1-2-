@@ -1,0 +1,78 @@
+﻿<Window x:Class="DolgoStrou.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DolgoStrou"
+        mc:Ignorable="d"
+        Title="Чудо Обувь — Авторизация" MinHeight="400" MinWidth="700" MaxHeight="400" MaxWidth="700" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFFFFF">
+        <!-- Определяем строки: каждая строка — это уровень -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Пустое место сверху -->
+            <RowDefinition Height="Auto"/>
+            <!--размер отступа от "Авторизация" вниз -->
+            <RowDefinition Height="30"/>
+            <!-- Отступ -->
+            <RowDefinition Height="Auto"/>
+            <!--размер отступа от "Поле ввода" вниз-->
+            <RowDefinition Height="30"/>
+            <!-- Отступ -->
+            <RowDefinition Height="Auto"/>
+           
+            <!-- Отступ -->
+            <RowDefinition Height="Auto"/>
+            <!--размер отступа от Кнопки "Зарегистрироваться" вниз-->
+            <RowDefinition Height="*"/>
+            <!-- Пустое место снизу -->
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" 
+                   Text="Авторизация" 
+                   FontSize="50" 
+                   HorizontalAlignment="Center"
+                   FontWeight="Bold"
+                   FontFamily="Calibri"
+                   />
+
+        <TextBox Grid.Row="3" 
+                 Width="500"
+                 x:Name="LoginTextBox"
+                 Height="35" 
+                 HorizontalAlignment="Center"
+                 FontSize="16"
+                 VerticalContentAlignment="Center" 
+                 HorizontalContentAlignment="Center"
+                 FontFamily="Calibri"
+                 BorderBrush="#70B2AF"
+                 Background="#FFFFFF"
+                 BorderThickness="1"/>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <Button Content="Вход!" 
+            Width="200" 
+            Height="45"
+            FontSize="18"
+            FontFamily="Calibri"
+            FontWeight="Bold"
+            Background="#70B2AF"
+            Foreground="White"
+            BorderThickness="0"
+            Click="LoginButton_Click"/>
+
+            <Button Content="Войти как ГОСТЬ" 
+            Width="200" 
+            Height="45"
+            FontSize="18"
+            FontFamily="Calibri"
+            FontWeight="Bold"
+            Background="#70B2AF"
+            Foreground="White"
+            BorderThickness="0"
+            Click="GuestButton_Click"
+            Margin="20,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
